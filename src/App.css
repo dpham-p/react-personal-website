@@ -1,0 +1,437 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+@font-face {
+  font-family: RobotoThin;
+  src: url('../src/fonts/Roboto-Thin.ttf');
+}
+@font-face {
+  font-family: RobotoLight;
+  src: url('../src/fonts/Roboto-Light.ttf');
+}
+@font-face {
+  font-family: RobotoRegular;
+  src: url('../src/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: RobotoBold;
+  src: url('../src/fonts/Roboto-Bold.ttf');
+}
+@font-face {
+  font-family: RobotoBlack;
+  src: url('../src/fonts/Roboto-Black.ttf');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: RobotoRegular;
+}
+
+main {
+  background-color: #1d324d;
+}
+
+.home {
+  color: white;
+  background: #36809f;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #36809f;
+  z-index: 2;
+}
+
+nav {
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2em;
+  width: 40%;
+}
+
+.nav-links a {
+  color: white;
+}
+
+.nav-links a:link,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+.anchor {
+  display: block;
+  height: 10vh; /* this is the height of your header */
+  margin-top: -10vh; /* this is again negative value of the height of your header */
+  visibility: hidden;
+}
+
+.logo {
+  font-family: RobotoBlack;
+  font-size: 4em;
+  padding-left: 0.2em;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+
+.page {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.character {
+  background: #36809f;
+  top: 10vh;
+}
+
+.hero {
+  align-self: center;
+  justify-self: center;
+  grid-column: 4/5;
+}
+
+.model {
+  align-self: center;
+  justify-self: center;
+  width: 75%;
+  height: auto;
+}
+
+.description {
+  grid-column: 2/4;
+  align-self: center;
+}
+
+.firstName {
+  font-family: RobotoBold;
+  font-size: 1200%;
+  line-height: 0.8;
+}
+
+.lastName {
+  font-family: RobotoBlack;
+  font-size: 1600%;
+  line-height: 0.8;
+}
+
+.name-rule {
+  width: 25%;
+  height: 1em;
+  background-color: #f8c532;
+  border: none;
+  margin: 1em 1em;
+}
+
+.job {
+  color: #f8c532;
+  font-family: RobotoThin;
+  font-size: 400%;
+  padding-left: 0.2em;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: #f9faf9;
+  padding: 1em 1em;
+}
+
+.work {
+  background-color: #2b7797;
+}
+
+.works {
+  grid-column: 2/5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+}
+
+.works h1 {
+  width: 100%;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.work-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: transparent;
+  width: 100%;
+  height: 90vh;
+  margin-bottom: 2em;
+  padding: 0 0;
+}
+
+.image-button-left {
+  align-self: center;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+.image-button-right {
+  align-self: center;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.work-item {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-image {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+}
+
+.story {
+  min-height: 90vh;
+  width: 75%;
+  margin: auto;
+  padding: 6em 0;
+  color: black;
+}
+
+.story-description {
+  width: 50%;
+}
+.story-description h1 {
+  font-family: RobotoBold;
+  font-size: 4em;
+  padding: 2rem 0;
+}
+
+.story-description p {
+  padding: 1rem 0;
+}
+
+.profile {
+  width: 40%;
+  align-self: center;
+  justify-self: center;
+}
+.profile img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  align-self: center;
+  justify-items: center;
+}
+
+.experience {
+  background-color: #f8f6f4;
+  color: black;
+}
+
+.history {
+  padding: 5em 0;
+  grid-column: 2/5;
+}
+
+.history h1 {
+  font-family: RobotoBold;
+  font-size: 3em;
+  text-align: center;
+  padding: 2em 0;
+}
+
+.history-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+}
+
+.history-image {
+  justify-self: center;
+  align-self: center;
+}
+
+.history-image img {
+  width: 250px;
+  height: 250px;
+}
+
+.history-content {
+  padding: 0 3em;
+}
+
+.history-content ul {
+  width: 30vw;
+  padding: 1em 1em;
+}
+
+.contact {
+  background-color: #1e3653;
+}
+
+.contactInfo {
+  align-self: center;
+  justify-self: center;
+  grid-column: 2/5;
+  font-size: 5em;
+  text-align: center;
+}
+
+.contactInfo ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+svg {
+  color: white;
+  width: 25px;
+  height: auto;
+}
+
+.fa-facebook-f {
+  width: 20px;
+}
+
+@media (max-width: 1080px) {
+  .logo {
+    font-size: 2em;
+  }
+
+  .nav-links {
+    font-size: 1em;
+    width: 60%;
+  }
+
+  .page {
+    grid-template-columns: 5% 1fr 5%;
+  }
+
+  .hero {
+    grid-column: 2/3;
+  }
+
+  .description {
+    grid-column: 2/3;
+    justify-content: center;
+  }
+
+  .firstName {
+    font-size: 20vw;
+  }
+  .lastName {
+    font-size: 26.5vw;
+  }
+
+  hr {
+    height: 0.5em;
+    margin: 0.5em 0.5em;
+  }
+
+  .job {
+    font-size: 4vw;
+  }
+
+  .model {
+    width: 200px;
+    height: auto;
+    transform: translate(0, 0);
+  }
+
+  .works {
+    grid-column: 2/3;
+    height: auto;
+  }
+  .works h1 {
+    font-size: 6vw;
+  }
+
+  .works {
+    transform: translate(0, 0%);
+  }
+
+  .work-container {
+    height: 30vh;
+  }
+
+  .contactInfo {
+    grid-column: 2/3;
+  }
+  .contactInfo h1 {
+    font-size: 8vw;
+  }
+
+  .contactInfo h3 {
+    font-size: 5vw;
+  }
+
+  .card {
+    flex-direction: column-reverse;
+  }
+
+  .story {
+    padding: 2em 0;
+  }
+
+  .story-description {
+    width: 100%;
+  }
+
+  .story-description h1 {
+    font-size: 3em;
+    padding: 1rem 0;
+  }
+
+  .profile {
+    width: 100%;
+  }
+  .profile img {
+    width: 100%;
+    height: auto;
+  }
+
+  .history-item {
+    flex-direction: column;
+  }
+
+  .history-content ul {
+    width: 100%;
+  }
+}
