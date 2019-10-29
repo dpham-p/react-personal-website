@@ -1,25 +1,24 @@
 import React from 'react';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   return (
-    <header>
-      <nav>
-        <h1 className='logo'>
-          <a href='#top'>DP</a>
-        </h1>
-        <ul className='nav-links'>
-          <li>
-            <a href='#work'>Work</a>
-          </li>
-          <li>
-            <a href='#about'>About Me</a>
-          </li>
-          <li>
-            <a href='#contact'>Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div className='navbar'>
+      <h1 className='logo'>
+        <NavLink to='#home'>DP</NavLink>
+      </h1>
+      <ul className='nav-links'>
+        <li>
+          <NavLink to='#projects'>Projects</NavLink>
+        </li>
+        <li>
+          <NavLink to='#about'>About</NavLink>
+        </li>
+        <li>
+          <NavLink to='#contact'>Contact</NavLink>
+        </li>
+      </ul>
+    </div>
   );
 };
 
