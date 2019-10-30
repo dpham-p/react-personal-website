@@ -11,12 +11,15 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <span className='anchor' id='home' />
       <Section title='' sectionContent={HomeSection} id='home' />
+      <span className='anchor' id='projects' />
       <Section
         title='Projects'
         sectionContent={ProjectsSection}
         id='projects'
       />
+      <span className='anchor' id='about' />
       <Section title='About Me' sectionContent={AboutSection} id='about' />
     </Router>
   );

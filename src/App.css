@@ -1,40 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 100%;
 }
 
-@font-face {
-  font-family: RobotoThin;
-  src: url('./fonts//Roboto-Thin.ttf');
+:root {
+  --primary-color: #111333;
+  --dark-shade: #131418;
+  --light-shade: #f0ebec;
+  --dark-accent: #7185a8;
+  --light-accent: #87a0a3;
 }
-@font-face {
-  font-family: RobotoLight;
-  src: url('./fonts/Roboto-Light.ttf');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
 }
-@font-face {
-  font-family: RobotoRegular;
-  src: url('./fonts/Roboto-Regular.ttf');
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
 }
-@font-face {
-  font-family: RobotoBold;
-  src: url('./fonts/Roboto-Bold.ttf');
+
+a:hover {
+  color: #666;
 }
-@font-face {
-  font-family: RobotoBlack;
-  src: url('./fonts/Roboto-Black.ttf');
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+/* Text Styles*/
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.large {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* Cards */
+.card {
+  padding: 1rem;
+  border: #ccc 1px dotted;
+  margin: 0.7rem 0;
+}
+
+/* List */
+.list {
+  margin: 0.5rem 0;
+}
+
+.list li {
+  padding-bottom: 0.3rem;
+}
+
+/* Padding */
+.p {
+  padding: 0.5rem;
+}
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+.py {
+  padding: 0.5rem 0;
+}
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+
+/* Margin */
+.m {
+  margin: 0.5rem;
+}
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 2rem;
+}
+.m-3 {
+  margin: 3rem;
+}
+.my {
+  margin: 0.5rem 0;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 2rem 0;
+}
+.my-3 {
+  margin: 3rem 0;
+}
+
+/* Grid */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+.grid-2-3 {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-gap: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--light-color);
+  color: #333;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+.btn-link {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-sm {
+  font-size: 0.8rem;
+  padding: 0.3rem 1rem;
+  margin-right: 0.2rem;
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.7rem;
+  text-align: center;
+  margin: 0.3rem;
+  background: var(--light-color);
+  color: #333;
+  border-radius: 5px;
+}
+
+.alert {
+  padding: 0.7rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: var(--light-color);
+  color: #333;
+}
+
+/*Background colors*/
+.btn-primary,
+.bg-primary,
+.badge-primary,
+.alert-primary {
+  background: var(--primary-color);
+}
+
+.bg-dark-shade {
+  background: var(--dark-shade);
+}
+
+.bg-light-shade {
+  background: var(--light-shade);
+}
+
+.bg-dark-accent {
+  background: var(--dark-accent);
+}
+
+.bg-light-accent {
+  background: var(--light-accent);
 }
 
 .section {
   min-height: 90vh;
   display: grid;
   grid-template-columns: 5% 1fr 1fr 1fr 5%;
+  margin: 1em;
 }
 
 /* Navbar */
+header {
+  position: sticky;
+  top: 0;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -50,6 +284,19 @@
 .navbar ul {
   display: flex;
   list-style: none;
+}
+
+.navbar a {
+  color: white;
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+}
+
+.anchor {
+  display: block;
+  height: 10vh; /* this is the height of your header */
+  margin-top: -10vh; /* this is again negative value of the height of your header */
+  visibility: hidden;
 }
 
 img {
