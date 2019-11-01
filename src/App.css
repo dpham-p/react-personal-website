@@ -16,6 +16,11 @@
   --light-accent: #87a0a3;
 }
 
+header {
+  position: sticky;
+  top: 0;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
@@ -76,7 +81,7 @@ img {
 }
 
 .text-dark {
-  color: var(--dark-color);
+  color: var(--dark-shade);
 }
 
 .text-center {
@@ -238,37 +243,94 @@ img {
 .badge-primary,
 .alert-primary {
   background: var(--primary-color);
+  color: #fff;
 }
 
 .bg-dark-shade {
   background: var(--dark-shade);
+  color: #fff;
 }
 
 .bg-light-shade {
   background: var(--light-shade);
+  color: #fff;
 }
 
 .bg-dark-accent {
   background: var(--dark-accent);
+  color: #fff;
 }
 
 .bg-light-accent {
   background: var(--light-accent);
+  color: #fff;
 }
 
-.section {
-  min-height: 90vh;
-  display: grid;
-  grid-template-columns: 5% 1fr 1fr 1fr 5%;
-  margin: 1em;
+.round-img {
+  border-radius: 50%;
+}
+
+/* Forms */
+input {
+  margin: 1.2rem 0;
+}
+
+.form-text {
+  display: block;
+  margin-top: 0.3rem;
+  color: #888;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='date'],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
+input[type='submit'],
+button {
+  font: inherit;
+}
+
+.form-group {
+  margin: 1.2rem 0;
+}
+
+.form-group input {
+  margin: 0.2rem 0;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.form-container h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+table th,
+table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+table th {
+  background: var(--light-color);
 }
 
 /* Navbar */
-header {
-  position: sticky;
-  top: 0;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -277,8 +339,9 @@ header {
   z-index: 1;
   width: 100%;
   border-bottom: solid 1px var(--primary-color);
+  box-shadow: 0 5px 20px -5px #000;
   opacity: 0.9;
-  margin-bottom: 1rem;
+  height: 10vh;
 }
 
 .navbar ul {
@@ -299,6 +362,10 @@ header {
   visibility: hidden;
 }
 
-img {
-  display: none;
+.section {
+  min-height: 90vh;
+}
+
+.model {
+  width: 30vw;
 }

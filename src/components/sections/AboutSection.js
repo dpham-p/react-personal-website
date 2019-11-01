@@ -1,4 +1,5 @@
 import React from 'react';
+import Portrait from '../../img/me.JPG';
 
 const AboutSection = (
   <div className='card'>
@@ -24,7 +25,7 @@ const AboutSection = (
       </p>
     </div>
     <div className='profile'>
-      <img src='./img/me.JPG' alt='Donald' />
+      <img src={Portrait} alt='Donald' />
     </div>
   </div>
 );

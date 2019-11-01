@@ -17,6 +17,11 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
+            <NavLink smooth to='#experience'>
+              Experience
+            </NavLink>
+          </li>
+          <li>
             <NavLink smooth to='#about'>
               About
             </NavLink>
