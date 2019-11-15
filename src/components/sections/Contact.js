@@ -6,7 +6,7 @@ import FacebookIcon from '../../icons/FacebookLogo';
 import InstagramIcon from '../../icons/InstagramLogo';
 
 const ContactSection = (
-  <div className='contactInfo'>
+  <div className='contact'>
     <h1>LET'S GET IN TOUCH!</h1>
     <div className='social'>
       <ul>

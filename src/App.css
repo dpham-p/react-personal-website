@@ -9,11 +9,11 @@
 }
 
 :root {
-  --primary-color: #111333;
-  --dark-shade: #131418;
-  --light-shade: #f0ebec;
-  --dark-accent: #7185a8;
-  --light-accent: #87a0a3;
+  --primary-color: #000000;
+  --dark-shade: #151317;
+  --light-shade: #eff0ec;
+  --dark-accent: #3e5c6e;
+  --light-accent: #636872;
 }
 
 header {
@@ -44,6 +44,7 @@ ul {
 
 img {
   width: 100%;
+  height: auto;
 }
 
 /* Utilities */
@@ -72,16 +73,16 @@ img {
   margin-bottom: 1rem;
 }
 
-.text-center {
-  text-align: center;
-}
-
 .text-primary {
   color: var(--primary-color);
 }
 
 .text-dark {
   color: var(--dark-shade);
+}
+
+.text-light {
+  color: var(--light-shade);
 }
 
 .text-center {
@@ -243,27 +244,30 @@ img {
 .badge-primary,
 .alert-primary {
   background: var(--primary-color);
-  color: #fff;
 }
 
 .bg-dark-shade {
   background: var(--dark-shade);
-  color: #fff;
 }
 
 .bg-light-shade {
   background: var(--light-shade);
-  color: #fff;
 }
 
 .bg-dark-accent {
   background: var(--dark-accent);
-  color: #fff;
 }
 
 .bg-light-accent {
   background: var(--light-accent);
-  color: #fff;
+}
+
+.bg-coffee {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('./img/coffee-cup-desk.jpg');
+  background-position: center;
+  background-size: cover;
+  background-color: #cccccc;
 }
 
 .round-img {
@@ -340,8 +344,8 @@ table th {
   width: 100%;
   border-bottom: solid 1px var(--primary-color);
   box-shadow: 0 5px 20px -5px #000;
-  opacity: 0.9;
-  height: 10vh;
+  opacity: 1;
+  height: 7.5vh;
 }
 
 .navbar ul {
@@ -350,22 +354,123 @@ table th {
 }
 
 .navbar a {
-  color: white;
+  color: var(--light-shade);
   padding: 0.45rem;
   margin: 0 0.25rem;
 }
 
 .anchor {
   display: block;
-  height: 10vh; /* this is the height of your header */
-  margin-top: -10vh; /* this is again negative value of the height of your header */
+  height: 7.5vh; /* this is the height of your header */
+  margin-top: -7.5vh; /* this is again negative value of the height of your header */
   visibility: hidden;
 }
 
-.section {
-  min-height: 90vh;
+.selectedLink {
+  text-decoration: underline;
 }
 
-.model {
-  width: 30vw;
+.section {
+  min-height: 92.5vh;
+  display: grid;
+  grid-template-rows: 0.75fr 6fr;
+  justify-content: center;
+  align-items: center;
+  scroll-margin-top: 7.5vh;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.home {
+  color: white;
+  text-shadow: 1px 1px 0 black;
+  padding-bottom: 200px;
+}
+
+.firstName {
+  font-size: 10rem;
+  letter-spacing: 2px;
+  line-height: 0.8;
+}
+
+.lastName {
+  font-size: 12rem;
+  letter-spacing: 1.5rem;
+  line-height: 0.8;
+}
+
+.name-rule {
+  width: 50%;
+  height: 0.75rem;
+  border: none;
+  background: #f8c532;
+  margin: 1rem;
+}
+
+.headline {
+  font-family: 'Roboto-Thin', sans-serif;
+  padding-left: 10px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 5rem auto auto auto;
+  background-color: var(--light-shade);
+}
+
+.about p {
+  padding: 1rem 0;
+  margin: auto;
+}
+
+.profile {
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  height: auto;
+}
+
+.work-item {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin: 2rem;
+}
+
+.work-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-logo img,
+.work-logo svg {
+  width: 150px;
+  height: auto;
+}
+
+.work-content {
+  align-self: center;
+  padding-left: 1rem;
+}
+
+.work-content h3 {
+  text-align: left;
+}
+
+.work-content ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+}
+
+.contact {
+  margin-bottom: 8rem;
+}
+
+.contact ul {
+  display: flex;
+  justify-content: space-between;
 }

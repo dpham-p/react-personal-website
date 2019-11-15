@@ -4,7 +4,7 @@ import GithubFinder from '../../img/githubfinder.PNG';
 import JSCalculator from '../../img/jscalculator.PNG';
 
 const ProjectsSection = (
-  <div className='card work-container'>
+  <div className='container'>
     <div className='work-item mySlides'>
       <a className='myLinks' href='https://dpham-contactkeeper.herokuapp.com/'>
         <img className='work-image' src={ContactKeeper} alt='contact keeper' />
