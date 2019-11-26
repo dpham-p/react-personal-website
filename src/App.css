@@ -463,7 +463,8 @@ table th {
 }
 
 .headline {
-  font-family: 'Roboto-Thin', sans-serif;
+  font-family: 'Roboto Thin', sans-serif;
+  font-size: 3vw;
   padding-left: 10px;
 }
 
