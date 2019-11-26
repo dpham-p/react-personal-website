@@ -1,9 +1,9 @@
 import React from 'react';
-import EmailIcon from '../../icons/Envelope';
-import GitHubIcon from '../../icons/GithubLogo';
-import LinkedInIcon from '../../icons/LinkedinLogo';
-import FacebookIcon from '../../icons/FacebookLogo';
-import InstagramIcon from '../../icons/InstagramLogo';
+import EmailIcon from '../../../icons/Envelope';
+import GitHubIcon from '../../../icons/GithubLogo';
+import LinkedInIcon from '../../../icons/LinkedinLogo';
+import FacebookIcon from '../../../icons/FacebookLogo';
+import InstagramIcon from '../../../icons/InstagramLogo';
 
 const ContactSection = (
   <div className='contact'>

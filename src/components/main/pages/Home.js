@@ -1,4 +1,5 @@
-import React, { useRef, useEffect, createRef } from 'react';
+import React, { Fragment, useRef, useEffect, createRef } from 'react';
+import Navbar from '../layout/Navbar';
 import Section from '../sections/Section';
 import Main from '../sections/Main';
 import About from '../sections/About';
@@ -9,21 +10,21 @@ import Experience from '../sections/Experience';
 const Home = () => {
   const sectionIds = ['main', 'about', 'projects', 'experience', 'contact'];
   const sectionRefs = useRef(sectionIds.map(() => createRef()));
-  let sectionPos = 0;
+  //let sectionPos = 0;
   let lastScrollTop = window.pageYOffset;
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
   });
 
-  const moveTo = ref => {
-    /* ref.current.scrollIntoView({
+  //const moveTo = ref => {
+  /* ref.current.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     }); */
-    //console.log(ref.current);
-    //console.log(ref.current.offsetTop);
-    if (ref.current.id === 'main') {
+  //console.log(ref.current);
+  //console.log(ref.current.offsetTop);
+  /* if (ref.current.id === 'main') {
       window.scrollTo({
         top: 0,
         left: 0,
@@ -36,7 +37,7 @@ const Home = () => {
         behavior: 'smooth'
       });
     }
-  };
+  }; */
 
   const handleScroll = e => {
     //console.log(e.nativeEvent.wheelDelta);
@@ -71,55 +72,58 @@ const Home = () => {
   };
 
   return (
-    <div className='section-container'>
-      <Section
-        bg='coffee'
-        text='light'
-        id='main'
-        refProp={sectionRefs.current[0]}
-      >
-        {Main}
-      </Section>
+    <Fragment>
+      <Navbar />
+      <div className='section-container'>
+        <Section
+          bg='coffee'
+          text='light'
+          id='main'
+          refProp={sectionRefs.current[0]}
+        >
+          {Main}
+        </Section>
 
-      <Section
-        title='About Me'
-        bg='dark-accent'
-        text='dark'
-        id='about'
-        refProp={sectionRefs.current[1]}
-      >
-        {About}
-      </Section>
+        <Section
+          title='About Me'
+          bg='dark-accent'
+          text='dark'
+          id='about'
+          refProp={sectionRefs.current[1]}
+        >
+          {About}
+        </Section>
 
-      <Section
-        title='Projects'
-        bg='dark-shade'
-        text='light'
-        id='projects'
-        refProp={sectionRefs.current[2]}
-      >
-        {Projects}
-      </Section>
+        <Section
+          title='Projects'
+          bg='dark-shade'
+          text='light'
+          id='projects'
+          refProp={sectionRefs.current[2]}
+        >
+          <Projects />
+        </Section>
 
-      <Section
-        title='Experience'
-        bg='light-shade'
-        text='dark'
-        id='experience'
-        refProp={sectionRefs.current[3]}
-      >
-        <Experience />
-      </Section>
+        <Section
+          title='Experience'
+          bg='light-shade'
+          text='dark'
+          id='experience'
+          refProp={sectionRefs.current[3]}
+        >
+          <Experience />
+        </Section>
 
-      <Section
-        bg='dark-shade'
-        text='light'
-        id='contact'
-        refProp={sectionRefs.current[4]}
-      >
-        {Contact}
-      </Section>
-    </div>
+        <Section
+          bg='dark-shade'
+          text='light'
+          id='contact'
+          refProp={sectionRefs.current[4]}
+        >
+          {Contact}
+        </Section>
+      </div>
+    </Fragment>
   );
 };
 

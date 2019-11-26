@@ -1,3 +1,0 @@
-export const GET_CURRENT_PAGE = 'CURRENT_PAGE';
-export const GET_PREVIOUS_PAGE = 'PREVIOUS_PAGE';
-export const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';

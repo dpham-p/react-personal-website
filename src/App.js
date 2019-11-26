@@ -1,16 +1,21 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
-import Navbar from './components/layout/Navbar';
-import FullPageScroll from './utilities/FullPageScroll';
-import Home from './components/pages/Home';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+//import Navbar from './components/main/layout/Navbar';
+
+import Home from './components/main/pages/Home';
+import Githubfinder from './Githubfinder';
+import NotFound from './components/main/pages/NotFound';
 
 const App = () => {
   return (
     <Router>
       <div>
-        <Navbar />
-        <Home />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/githubfinder' component={Githubfinder} />
+          <Route component={NotFound} />
+        </Switch>
       </div>
     </Router>
   );

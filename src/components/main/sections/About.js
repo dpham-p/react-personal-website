@@ -1,10 +1,10 @@
 import React from 'react';
-import Portrait from '../../img/me.JPG';
+import Portrait from '../../../img/me.JPG';
 
 const AboutSection = (
   <div className='about card'>
     <div className='description'>
-      <h1>Hello, I'm Donald!</h1>
+      <h2>Hello, I'm Donald!</h2>
       <p>
         I was born and raised in Lincoln, Nebraska. I graduated from the
         University of Nebraska - Lincoln with a degree in Electrical

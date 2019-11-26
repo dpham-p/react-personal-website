@@ -1,8 +1,8 @@
 import React from 'react';
-import Laptop from '../../icons/LaptopCodeSolid';
-import CSE from '../../img/CSE.png';
-import NPPD from '../../img/NPPD.png';
-import SmartChicken from '../../img/smartchicken.png';
+import Laptop from '../../../icons/LaptopCodeSolid';
+import CSE from '../../../img/CSE.png';
+import NPPD from '../../../img/NPPD.png';
+import SmartChicken from '../../../img/smartchicken.png';
 
 const WorkLogo = props => {
   switch (props.name) {

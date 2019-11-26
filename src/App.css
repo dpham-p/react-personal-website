@@ -16,11 +16,6 @@
   --light-accent: #636872;
 }
 
-header {
-  position: sticky;
-  top: 0;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
@@ -319,8 +314,8 @@ button {
 }
 
 .form-container h1,
-h2,
-h3 {
+.form-container h2,
+.form-container h3 {
   text-align: center;
 }
 
@@ -336,27 +331,79 @@ table th {
 
 /* Navbar */
 .navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.7rem 2rem;
-  z-index: 1;
+  padding: 0rem 0rem;
+  z-index: 99;
   width: 100%;
-  border-bottom: solid 1px var(--primary-color);
-  box-shadow: 0 5px 20px -5px #000;
-  opacity: 1;
-  height: 7.5vh;
-}
-
-.navbar ul {
-  display: flex;
+  box-shadow: 0px 5px 20px -5px #000;
+  min-height: 8vh;
   list-style: none;
 }
 
 .navbar a {
   color: var(--light-shade);
-  padding: 0.45rem;
+  padding: 0.75rem;
   margin: 0 0.25rem;
+  font-family: 'Roboto Bold', sans-serif;
+  font-size: 1.25rem;
+}
+
+/* Additional */
+.navbar.responsive li {
+  padding-top: 40px;
+}
+
+.links-container {
+  padding-right: 5vw;
+}
+
+.nav-links {
+  transition: 0.5s;
+}
+
+.nav-closed {
+  text-align: center;
+  height: 0px;
+}
+
+.nav-opened {
+  text-align: center;
+  height: 350px;
+}
+
+.responsive {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+}
+
+.logo a {
+  font-size: 3rem;
+  margin-left: 5vw;
+}
+
+.hamburger,
+.close {
+  cursor: pointer;
+  margin-right: 5vw;
+}
+
+.invisible {
+  visibility: hidden;
 }
 
 .anchor {
@@ -380,7 +427,12 @@ table th {
 }
 
 .section-title {
+  padding-top: 20px;
   text-align: center;
+}
+
+.section#main {
+  height: 100vh;
 }
 
 .home {
@@ -390,14 +442,15 @@ table th {
 }
 
 .firstName {
-  font-size: 10rem;
-  letter-spacing: 2px;
+  padding-left: 0.45vw;
+  font-family: 'Roboto Thin', sans-serif;
+  font-size: 10.5vw;
   line-height: 0.8;
 }
 
 .lastName {
-  font-size: 12rem;
-  letter-spacing: 1.5rem;
+  font-family: 'Roboto Black', sans-serif;
+  font-size: 15vw;
   line-height: 0.8;
 }
 
@@ -417,14 +470,22 @@ table th {
 .about {
   display: flex;
   justify-content: space-between;
-  width: 75%;
+  width: 85%;
   margin: 5rem auto auto auto;
   background-color: var(--light-shade);
 }
 
 .about p {
-  padding: 1rem 0;
-  margin: auto;
+  width: 90%;
+  padding: 1rem 0 0 0;
+}
+
+.about h2 {
+  text-align: left;
+}
+
+.description {
+  padding-right: 2%;
 }
 
 .profile {
@@ -437,7 +498,7 @@ table th {
 .work-item {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  margin: 2rem;
+  padding-bottom: 2rem;
 }
 
 .work-logo {
@@ -448,7 +509,7 @@ table th {
 
 .work-logo img,
 .work-logo svg {
-  width: 150px;
+  width: 175px;
   height: auto;
 }
 
@@ -473,4 +534,92 @@ table th {
 .contact ul {
   display: flex;
   justify-content: space-between;
+}
+
+.projects {
+  width: 90vw;
+}
+
+.image-overlay {
+  display: flex;
+  background: rgba(0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  transition: 2s ease;
+  opacity: 0;
+
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-overlay a {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+}
+
+.swiper-slide:hover .image-overlay {
+  opacity: 0.7;
+}
+
+@media (max-width: 1080px) {
+  .section {
+    grid-template-rows: 0.5fr 6fr;
+  }
+
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .name-rule {
+    margin: 1rem 25%;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+    margin: 1rem auto auto auto;
+  }
+
+  .about p {
+    width: 100%;
+  }
+
+  .description {
+    padding-right: 0px;
+  }
+
+  .works {
+    width: 80%;
+    margin: auto;
+  }
+
+  .work-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 95%;
+    margin: auto;
+  }
+
+  .work-item h3 {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .work-logo img,
+  .work-logo svg {
+    width: 250px;
+  }
+}
+
+@media (max-width: 380px) {
+  .description {
+    font-size: 0.85rem;
+  }
 }
