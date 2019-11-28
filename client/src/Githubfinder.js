@@ -12,7 +12,7 @@ import AlertState from './context/githubfinder/alert/AlertState';
 import ghfStyle from './styles/Githubfinder.module.css';
 
 const Githubfinder = () => {
-  let { path } = useRouteMatch();
+  const { path } = useRouteMatch();
 
   return (
     <GithubState>

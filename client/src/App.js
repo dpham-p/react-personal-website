@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Home from './components/main/pages/Home';
 import Githubfinder from './Githubfinder';
+import Contactkeeper from './Contactkeeper';
 import NotFound from './components/main/pages/NotFound';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/githubfinder' component={Githubfinder} />
+          <Route path='/contactkeeper' component={Contactkeeper} />
           <Route component={NotFound} />
         </Switch>
       </div>
