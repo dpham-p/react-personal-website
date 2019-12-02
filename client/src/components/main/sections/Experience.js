@@ -9,7 +9,7 @@ const ExperienceSection = () => {
         title: 'Self-Learning Developer',
         duration: '2019 - Present',
         duties: [
-          'Learning C# and practicing Javascript.',
+          'Learning C# and practicing React.js.',
           'Currently working on Restaurant Picker application using MERN stack.',
           'Looking for internship/full-time position.'
         ]

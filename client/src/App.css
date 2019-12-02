@@ -337,58 +337,107 @@ table th {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 0rem;
-  z-index: 99;
   width: 100%;
   box-shadow: 0px 5px 20px -5px #000;
   min-height: 8vh;
   list-style: none;
+  z-index: 99;
+  background-color: var(--dark-shade);
 }
 
 .navbar a {
   color: var(--light-shade);
-  padding: 0.75rem;
-  margin: 0 0.25rem;
   font-family: 'Roboto Bold', sans-serif;
-  font-size: 1.25rem;
 }
 
 /* Additional */
-.navbar.responsive li {
-  padding-top: 40px;
-}
-
-.links-container {
-  padding-right: 5vw;
+.mobile {
+  display: block;
 }
 
 .nav-links {
-  transition: 0.5s;
+  align-self: stretch;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 0.75s;
+  padding-right: 5.5vw;
+}
+
+.nav-links a {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  padding: 0px 0.75rem;
+  font-size: 1.5rem;
+}
+
+.nav-mobile {
+  display: block;
+  padding: 0 0;
+}
+
+.nav-mobile .projects-dropdown {
+  justify-content: center;
+}
+
+.nav-mobile a {
+  padding: 1rem 0;
 }
 
 .nav-closed {
   text-align: center;
-  height: 0px;
+  height: 0vh;
 }
 
 .nav-opened {
   text-align: center;
-  height: 350px;
+  height: 70vh;
 }
 
-.responsive {
-  display: block;
-}
-
-.d-flex {
+.projects-dropdown {
+  align-self: stretch;
   display: flex;
+  align-items: center;
+}
+
+.projects-dropdown a {
+  align-self: stretch;
+}
+
+.projects-dropdown:hover {
+  color: black;
+  background-color: grey;
+}
+
+.projects-dropdown a:hover {
+  color: black;
+}
+
+.project-links {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  background-color: var(--light-accent);
+  box-shadow: 0px 8px 16px 0px inset rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  margin-top: 10vh;
+  transition: 0.5s;
+}
+
+.project-links a {
+  color: var(--light-shade);
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 
 .logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 8vh;
 }
 
 .logo a {
@@ -414,7 +463,8 @@ table th {
 }
 
 .selectedLink {
-  text-decoration: underline;
+  background-color: grey;
+  color: black;
 }
 
 .section {
@@ -575,6 +625,25 @@ table th {
 }
 
 @media (max-width: 1080px) {
+  .projects-dropdown {
+    display: block;
+    transition: 0.5s;
+  }
+
+  .project-links {
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .project-links a {
+    text-align: center;
+    color: var(--light-shade);
+  }
+
   .section {
     grid-template-rows: 0.5fr 6fr;
   }
@@ -584,6 +653,14 @@ table th {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .firstName {
+    font-size: 15vw;
+  }
+
+  .lastName {
+    font-size: 17.5vw;
   }
 
   .name-rule {

@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useEffect, createRef } from 'react';
+import React, { Fragment, useRef, createRef } from 'react';
 import Navbar from '../layout/Navbar';
 import Section from '../sections/Section';
 import Main from '../sections/Main';
@@ -11,11 +11,11 @@ const Home = () => {
   const sectionIds = ['main', 'about', 'projects', 'experience', 'contact'];
   const sectionRefs = useRef(sectionIds.map(() => createRef()));
   //let sectionPos = 0;
-  let lastScrollTop = window.pageYOffset;
+  //let lastScrollTop = window.pageYOffset;
 
-  useEffect(() => {
+  /*  useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-  });
+  }); */
 
   //const moveTo = ref => {
   /* ref.current.scrollIntoView({
@@ -38,10 +38,10 @@ const Home = () => {
       });
     }
   }; */
-
-  const handleScroll = e => {
+  //const clientHeight = document.documentElement.clientHeight;
+  /*  const handleScroll = e => {
     //console.log(e.nativeEvent.wheelDelta);
-    /* if (e.nativeEvent.wheelDelta > 0) {
+    if (e.nativeEvent.wheelDelta > 0) {
       sectionPos--;
 
       if (sectionPos > 0) {
@@ -59,17 +59,8 @@ const Home = () => {
         sectionPos = sectionIds.length - 1;
       }
       //console.log(sectionPos);
-    } */
-    let currentScrollTop = document.documentElement.scrollTop;
-    console.log(lastScrollTop);
-    console.log(currentScrollTop);
-    if (lastScrollTop > currentScrollTop) {
-      console.log('scrolling up');
-    } else {
-      console.log('scrolling down');
-    }
-    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-  };
+    } 
+  }*/
 
   return (
     <Fragment>
