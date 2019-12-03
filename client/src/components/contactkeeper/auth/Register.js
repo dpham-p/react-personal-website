@@ -2,6 +2,8 @@ import React, { useState, useContext, useEffect } from 'react';
 import AlertContext from '../../../context/contactkeeper/alert/alertContext';
 import AuthContext from '../../../context/contactkeeper/auth/authContext';
 
+import ckStyle from '../../../styles/Contactkeeper.module.css';
+
 const Register = props => {
   const alertContext = useContext(AlertContext);
   const authContext = useContext(AuthContext);
@@ -98,7 +100,7 @@ const Register = props => {
         <input
           type='submit'
           value='Register'
-          className='btn btn-primary btn-block'
+          className={`${ckStyle.btn} ${ckStyle['btn-primary']} ${ckStyle['btn-block']}`}
         />
       </form>
     </div>

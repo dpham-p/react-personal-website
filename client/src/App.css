@@ -624,7 +624,7 @@ table th {
   color: white;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1199px) {
   .projects-dropdown {
     display: block;
     transition: 0.5s;
