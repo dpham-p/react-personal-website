@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 const WorkContent = ({ content }) => {
   const { title, duration, duties } = content;
@@ -15,6 +16,10 @@ const WorkContent = ({ content }) => {
       </div>
     </Fragment>
   );
+};
+
+WorkContent.prototype = {
+  content: PropTypes.object.isRequired
 };
 
 export default WorkContent;

@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.2",
-    "nodemon": "^1.19.4"
+    "nodemon": "^1.19.4",
+    "react-app-env": "^1.2.3"
   }
 }

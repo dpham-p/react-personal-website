@@ -15,9 +15,9 @@
     "swiper": "^5.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-env start",
+    "build": "react-app-env build",
+    "test": "react-app-env test",
     "eject": "react-scripts eject",
     "svgr": "svgr -d src/Icons/ assets/"
   },
@@ -37,7 +37,8 @@
     ]
   },
   "devDependencies": {
-    "@svgr/cli": "^4.3.3"
+    "@svgr/cli": "^4.3.3",
+    "react-app-env": "^1.2.3"
   },
   "proxy": "http://localhost:5000"
 }
