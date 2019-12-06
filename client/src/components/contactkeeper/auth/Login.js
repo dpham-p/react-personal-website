@@ -14,7 +14,6 @@ const Login = props => {
   useEffect(() => {
     if (isAuthenticated) {
       props.history.push('/contactkeeper');
-      console.log('authenticated');
     }
 
     if (error === 'Invalid Credentials') {

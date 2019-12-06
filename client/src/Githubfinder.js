@@ -18,7 +18,7 @@ const Githubfinder = () => {
     <GithubState>
       <AlertState>
         <div className='App'>
-          <Navbar title='Github Finder' icon='fab fa-github' />
+          <Navbar title='GitHubFinder' icon='fab fa-github' />
           <div className={ghfStyle.container}>
             <Alert />
             <Switch>

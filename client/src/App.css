@@ -9,7 +9,7 @@
 }
 
 :root {
-  --primary-color: #000000;
+  --main-color: #000000;
   --dark-shade: #151317;
   --light-shade: #eff0ec;
   --dark-accent: #3e5c6e;
@@ -25,7 +25,7 @@ body {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--main-color);
   text-decoration: none;
 }
 
@@ -69,7 +69,7 @@ img {
 }
 
 .text-primary {
-  color: var(--primary-color);
+  color: var(--main-color);
 }
 
 .text-dark {
@@ -215,6 +215,12 @@ img {
   margin-right: 0.2rem;
 }
 
+.btn-md {
+  font-size: 1.2rem;
+  padding: 0.3rem 1rem;
+  margin-right: 0.2rem;
+}
+
 .badge {
   font-size: 0.8rem;
   padding: 0.2rem 0.7rem;
@@ -238,21 +244,25 @@ img {
 .bg-primary,
 .badge-primary,
 .alert-primary {
-  background: var(--primary-color);
+  background: var(--main-color);
 }
 
+.btn-dark-shade,
 .bg-dark-shade {
   background: var(--dark-shade);
 }
 
+.btn-light-shade,
 .bg-light-shade {
   background: var(--light-shade);
 }
 
+.btn-dark-accent,
 .bg-dark-accent {
   background: var(--dark-accent);
 }
 
+.btn-light-accent,
 .bg-light-accent {
   background: var(--light-accent);
 }
@@ -342,7 +352,7 @@ table th {
   min-height: 8vh;
   list-style: none;
   z-index: 99;
-  background-color: var(--dark-shade);
+  background-color: var(--main-color);
 }
 
 .navbar a {
@@ -374,6 +384,12 @@ table th {
   font-size: 1.5rem;
 }
 
+.nav-links a:hover {
+  background-color: var(--dark-shade);
+  border-radius: 15px;
+  color: var(--light-shade);
+}
+
 .nav-mobile {
   display: block;
   padding: 0 0;
@@ -389,7 +405,7 @@ table th {
 
 .nav-closed {
   text-align: center;
-  height: 0vh;
+  height: 0rem;
 }
 
 .nav-opened {
@@ -408,30 +424,30 @@ table th {
 }
 
 .projects-dropdown:hover {
-  color: black;
-  background-color: grey;
-}
-
-.projects-dropdown a:hover {
-  color: black;
+  color: var(--light-shade);
+  background-color: var(--dark-shade);
+  border-radius: 15px;
 }
 
 .project-links {
   display: block;
   position: fixed;
   z-index: 1;
-  background-color: var(--light-accent);
+  background-color: var(--light-shade);
   box-shadow: 0px 8px 16px 0px inset rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
   min-width: 160px;
   margin-top: 10vh;
   transition: 0.5s;
 }
 
 .project-links a {
-  color: var(--light-shade);
+  color: var(--main-color);
   text-decoration: none;
   display: block;
   text-align: left;
+  font-size: 1.5rem;
+  border-radius: 5px;
 }
 
 .logo {
@@ -463,8 +479,8 @@ table th {
 }
 
 .selectedLink {
-  background-color: grey;
-  color: black;
+  background-color: var(--dark-shade);
+  border-radius: 20px;
 }
 
 .section {
@@ -624,6 +640,14 @@ table th {
   color: white;
 }
 
+.social-links {
+  padding: 2rem 1rem;
+}
+
+.social-links a:hover {
+  background-color: var(--dark-shade);
+}
+
 @media (max-width: 1199px) {
   .projects-dropdown {
     display: block;
@@ -641,7 +665,7 @@ table th {
 
   .project-links a {
     text-align: center;
-    color: var(--light-shade);
+    color: var(--main-color);
   }
 
   .section {

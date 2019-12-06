@@ -3,12 +3,14 @@ import Contacts from '../contacts/Contacts';
 import ContactForm from '../contacts/ContactForm';
 import ContactFilter from '../contacts/ContactFilter';
 import AuthContext from '../../../context/contactkeeper/auth/authContext';
+import setAuthToken from '../../../utils/setAuthToken';
 import Media from 'react-media';
 
 const Home = () => {
   const authContext = useContext(AuthContext);
-
+  setAuthToken(localStorage.getItem('token'));
   useEffect(() => {
+    document.title = 'ContactKeeper - Home';
     authContext.loadUser();
     // eslint-disable-next-line
   }, []);

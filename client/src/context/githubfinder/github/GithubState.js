@@ -33,6 +33,7 @@ const GithubState = props => {
 
   // Search Users
   const searchUsers = async text => {
+    delete axios.defaults.headers.common['x-auth-token'];
     setLoading(true);
 
     const res = await axios.get(

@@ -5,7 +5,7 @@ import Media from 'react-media';
 import Hamburger from '../../../icons/Hamburger';
 import Close from '../../../icons/Close';
 
-const Navbar = () => {
+const Navbar = props => {
   const clientHeight = document.documentElement.clientHeight;
   const aboutTop = Math.floor(clientHeight * 0.925);
   const projectsTop = Math.floor(clientHeight * 0.925 * 2);
@@ -32,11 +32,21 @@ const Navbar = () => {
       currentScrollTop >= experienceTop && currentScrollTop < contactTop;
     let contactActive = currentScrollTop >= contactTop;
 
-    if (mainActive) setActiveLink('');
-    if (aboutActive) setActiveLink('about');
-    if (projectsActive) setActiveLink('projects');
-    if (experienceActive) setActiveLink('experience');
-    if (contactActive) setActiveLink('contact');
+    if (mainActive) {
+      setActiveLink('');
+    }
+    if (aboutActive) {
+      setActiveLink('about');
+    }
+    if (projectsActive) {
+      setActiveLink('projects');
+    }
+    if (experienceActive) {
+      setActiveLink('experience');
+    }
+    if (contactActive) {
+      setActiveLink('contact');
+    }
 
     //lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
   };
@@ -94,7 +104,6 @@ const Navbar = () => {
                       className='hamburger'
                       onClick={() => {
                         setHamburger(false);
-                        setMobileNav(true);
                       }}
                     />
                   ) : (
@@ -104,7 +113,6 @@ const Navbar = () => {
                       className='close'
                       onClick={() => {
                         setHamburger(true);
-                        setMobileNav(false);
                       }}
                     />
                   )}
@@ -143,6 +151,7 @@ const Navbar = () => {
             }
             onMouseOver={() => setDropdown(true)}
             onMouseLeave={() => setDropdown(false)}
+            onDoubleClick={() => setDropdown(!dropdown)}
           >
             <HashLink
               smooth
