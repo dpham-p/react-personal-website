@@ -267,6 +267,10 @@ img {
   background: var(--light-accent);
 }
 
+.bg-yellow {
+  background: #f8c532;
+}
+
 .bg-coffee {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url('./img/coffee-cup-desk.jpg');

@@ -77,7 +77,7 @@ const Home = () => {
 
         <Section
           title='About Me'
-          bg='dark-accent'
+          bg='yellow'
           text='dark'
           id='about'
           refProp={sectionRefs.current[1]}
