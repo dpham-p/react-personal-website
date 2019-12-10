@@ -24,21 +24,24 @@ const ProjectsSection = () => {
     },
     pagination: {
       el: '.swiper-pagination'
-    }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    containerClass: 'swiper-custom-container'
   };
 
   return (
     <Media queries={{ large: '(min-width: 1200px)' }}>
       {matches => (
-        <div className='projects'>
+        <div className='slides'>
           <Swiper {...params}>
             <div
               style={{
                 background: `url(${
                   matches.large ? ContactKeeper : ContactkeeperMobile
-                })  top center/100% 100% no-repeat`,
-                width: '80vw',
-                height: '75vh'
+                }) top center/ 100% auto no-repeat`
               }}
             >
               <div className='image-overlay'>
@@ -49,9 +52,7 @@ const ProjectsSection = () => {
               style={{
                 background: `url(${
                   matches.large ? GithubFinder : GithubFinderMobile
-                })  top center/100% 100% no-repeat`,
-                width: '80vw',
-                height: '75vh'
+                }) top center/ 100% auto no-repeat`
               }}
             >
               <div className='image-overlay'>
@@ -62,9 +63,7 @@ const ProjectsSection = () => {
               style={{
                 background: `url(${
                   matches.large ? JSCalculator : JSCalculator
-                })  top center/100% 100% no-repeat`,
-                width: '80vw',
-                height: '70vh'
+                }) top center/ 100% auto no-repeat`
               }}
             >
               <div className='image-overlay'>
