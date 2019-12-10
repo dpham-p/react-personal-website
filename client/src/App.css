@@ -609,6 +609,7 @@ table th {
 #projects {
   align-items: normal;
   justify-content: normal;
+  overflow: hidden;
 }
 
 .slides {
@@ -739,6 +740,15 @@ table th {
   .work-logo img,
   .work-logo svg {
     width: 250px;
+  }
+
+  .swiper-custom-container {
+    max-width: 450px;
+    height: 90%;
+  }
+
+  #projects {
+    justify-content: center;
   }
 }
 

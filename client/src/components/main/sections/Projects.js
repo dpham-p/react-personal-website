@@ -13,17 +13,19 @@ const ProjectsSection = () => {
   const params = {
     effect: 'coverflow',
     grabCursor: true,
-    centeredSlides: true,
+    centeredSlides: false,
     slidesPerView: 'auto',
+    loop: true,
     coverflowEffect: {
-      rotate: 50,
+      rotate: 25,
       stretch: 0,
-      depth: 100,
+      depth: 50,
       modifier: 1,
       slideShadows: true
     },
     pagination: {
-      el: '.swiper-pagination'
+      el: '.swiper-pagination',
+      clickable: true
     },
     navigation: {
       nextEl: '.swiper-button-next',
@@ -62,7 +64,7 @@ const ProjectsSection = () => {
             <div
               style={{
                 background: `url(${
-                  matches.large ? JSCalculator : JSCalculator
+                  matches.large ? JSCalculator : GithubFinderMobile
                 }) top center/ 100% auto no-repeat`
               }}
             >
