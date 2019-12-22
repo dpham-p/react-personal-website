@@ -463,6 +463,8 @@ table th {
 .logo a {
   font-size: 3rem;
   margin-left: 5vw;
+  display: flex;
+  justify-content: center;
 }
 
 .hamburger,

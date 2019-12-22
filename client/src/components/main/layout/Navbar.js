@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import Logo from '../../../img/Logo-NoBackground.png';
 import Media from 'react-media';
 import Hamburger from '../../../icons/Hamburger';
 import Close from '../../../icons/Close';
@@ -84,7 +85,7 @@ const Navbar = props => {
       <div className={`navbar ${mobileNav ? 'mobile' : ''}`}>
         <h1 className='logo'>
           <HashLink smooth to='#main' onClick={() => setHamburger(true)}>
-            DP
+            <img src={Logo} alt='logo' />
           </HashLink>
           <Media
             queries={{
